@@ -161,9 +161,9 @@ public class ListaCondicional {
 			static void ex12(){
 				Scanner sc=new Scanner(System.in);
 				System.out.println("Digite um numero : ");
-				float n1=sc.nextInt();
+				float n1=sc.nextFloat();
 				System.out.println("Digite outro numero : ");
-				float n2=sc.nextInt();
+				float n2=sc.nextFloat();
 				System.out.println("Digite uma operacao : ");
 				char operacao=sc.nextLine().charAt(0);
 				if (operacao=='+') {
@@ -182,7 +182,7 @@ public class ListaCondicional {
 			static void ex13() {
 				Scanner sc=new Scanner(System.in);
 				System.out.println("Digite o seu salario : ");
-				float salario=sc.nextInt();
+				float salario=sc.nextFloat();
 				if (salario<2000) {
 					System.out.println("O salario será : "+salario*0.9f);
 				}
@@ -195,6 +195,58 @@ public class ListaCondicional {
 				else if (salario>=10000) {
 					System.out.println("O salario será : "+salario*0.65f);
 				}
+			}
+			static void ex14() {
+				Scanner sc=new Scanner(System.in);
+				System.out.println("Digite o valor da compra : ");
+				float valor=sc.nextFloat();
+				if (valor<=100) {
+					System.out.println("O valor será : "+valor);
+				}
+				else if (valor>100&&valor<=500) {
+					System.out.println("O valor será : "+valor*0.9f);
+				}
+				if (valor<500) {
+					System.out.println("O valor será : "+valor*0.8f);
+				}
+			}
+			static void ex15(){
+				Scanner sc=new Scanner(System.in);
+				System.out.println("Digite sua idade : ");
+				int idade=sc.nextInt();
+				if (idade>=0&&idade<=12) {
+					System.out.println("Você é criança");
+				}
+				else if (idade>=13&&idade<=17){
+					System.out.println("Você é adolescente");
+				}
+				else if (idade>=18&&idade<=59){
+					System.out.println("Você é adulto");
+				}
+				else if (idade>=60){
+					System.out.println("Você é idoso");
+				}
+			}
+			static void ex16() {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Digite um numero : ");
+			float n1=sc.nextFloat();
+			System.out.println("Digite outro numero : ");
+			float n2=sc.nextFloat();
+			System.out.println("Digite outro numero : ");
+			float n3=sc.nextFloat();
+			
+			float media=n1+n2+n3/3;
+			if (media>=7) {
+				System.out.println("Você está aprovado");
+			}
+			else if (media>=4) {
+				System.out.println("Você está de recuperação");
+			}
+			else if (media<4) {
+				System.out.println("Você está reprovado");
+			}
+			
 			}
 	}
 
