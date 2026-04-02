@@ -4,7 +4,7 @@ public class ListaCondicional {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		ex10();
 	}
 	static void ex1(){
 		Scanner sc=new Scanner(System.in);
@@ -142,12 +142,13 @@ public class ListaCondicional {
 				String usuario=sc.nextLine();
 				System.out.println("Digite a senha : ");
 				String senha=sc.nextLine();
-				if (usuario=="joao"&&senha=="123") {
+				if (usuario.equals("joao")&&senha.equals("123")) {
 					System.out.println("Acesso Permitido");
 				}
 				else {
 					System.out.println("Acesso Negado");
 				}
+				sc.close();
 			
 		}
 			static void ex11() {
