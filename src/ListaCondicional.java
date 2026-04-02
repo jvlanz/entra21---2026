@@ -263,6 +263,22 @@ public class ListaCondicional {
 				}
 				sc.close();
 			}
+			static void ex18() {
+				Scanner sc=new Scanner(System.in);
+				int nSecreto=10;
+				System.out.println("Tente acertar o número secreto");
+				int palpite=sc.nextInt();
+				if (palpite>nSecreto) {
+					System.out.println("O número que estou pensando é menor");
+				}
+				else if (palpite<nSecreto) {
+					System.out.println("O número que estou pensando é maior");
+				}
+				else {
+					System.out.println("Parabéns!!! Você acertou o número que eu estava pensando");
+				}
+				sc.close();
+			}
 	}
 
 
