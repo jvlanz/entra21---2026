@@ -248,6 +248,21 @@ public class ListaCondicional {
 			}
 			
 			}
+			static void ex17() {
+				Scanner sc=new Scanner(System.in);
+				System.out.println("Digite o seu salário : ");
+				float salario=sc.nextFloat();
+				System.out.println("Digite o valor das parcelas : ");
+				float parcelas=sc.nextFloat();
+				
+				if (salario/parcelas<=0.4f) {
+					System.out.println("Você está elegível para o emprestimo");
+				}
+				else {
+					System.out.println("Você está inelegível para o emprestimo");
+				}
+				sc.close();
+			}
 	}
 
 
