@@ -4,18 +4,19 @@ public class ListaCondicional {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ex10();
+		ex9();
 	}
 	static void ex1(){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Digite um numero : ");
 		int valor=sc.nextInt();
 		if (valor%2==0) {
-			System.out.println("Este valor é par");
+			System.out.println("Este numero é par");
 		}
 		else {
-			System.out.println("Este valor é impar");
+			System.out.println("Este numero é impar");
 		}
+		sc.close();
 	}
 		static void ex2(){
 			Scanner sc=new Scanner(System.in);
@@ -43,6 +44,7 @@ public class ListaCondicional {
 			else {
 				System.out.println("Este valor é zero");
 			}
+			sc.close();
 		}
 		static void ex4(){
 			Scanner sc=new Scanner(System.in);
@@ -54,6 +56,7 @@ public class ListaCondicional {
 			else {
 				System.out.println("Reprovado");
 			}
+			sc.close();
 		}
 		static void ex5(){
 			Scanner sc=new Scanner(System.in);
@@ -65,6 +68,7 @@ public class ListaCondicional {
 			else {
 				System.out.println("Você não pode votar");
 			}
+			sc.close();
 		}
 		static void ex6(){
 			Scanner sc=new Scanner(System.in);
@@ -83,6 +87,7 @@ public class ListaCondicional {
 			else {
 				System.out.println("O maior numero é : "+n3);
 			}
+			sc.close();
 		}
 		static void ex7(){
 			Scanner sc=new Scanner(System.in);
@@ -100,6 +105,7 @@ public class ListaCondicional {
 			else {
 				System.out.println("Insuficiente");
 			}
+			sc.close();
 		}
 		static void ex8(){
 			Scanner sc=new Scanner(System.in);
@@ -110,31 +116,33 @@ public class ListaCondicional {
 			System.out.println("Digite outro numero : ");
 			int n3=sc.nextInt();
 		
-			if (n1+n2>n3&&n2+n3>n1&&n2+n3>n1) {
+			if (n1+n2>n3&&n1+n3>n2&&n2+n3>n1) {
 				System.out.println("Pode ser um triangulo");
 			}
 			else {
-				System.out.println("O triangulo nao existe");
+				System.out.println("O triângulo não pode existir");
 			}
+			sc.close();
 		}
 		static void ex9(){
 			Scanner sc=new Scanner(System.in);
-			System.out.println("Digite um numero : ");
+			System.out.println("Digite um número : ");
 			int n1=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n2=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n3=sc.nextInt();
 			
 			if (n1==n2&&n1==n3) {
-				System.out.println("O triangulo é equilatero");
+				System.out.println("O triângulo é equilatero");
 			}
 			else if (n1!=n2&&n1!=n3&&n2!=n3) {
-				System.out.println("O triangulo é escaleno");
+				System.out.println("O triângulo é escaleno");
 			}
 			else {
-				System.out.println("O triangulo é isosceles");
+				System.out.println("O triângulo é isosceles");
 			}
+			sc.close();
 		}
 			static void ex10() {
 				Scanner sc=new Scanner(System.in);
@@ -158,6 +166,7 @@ public class ListaCondicional {
 				if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
 					System.out.println("O ano é bissexto");
 				}
+				sc.close();
 			}
 			static void ex12(){
 				Scanner sc=new Scanner(System.in);
