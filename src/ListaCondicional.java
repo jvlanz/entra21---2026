@@ -280,6 +280,59 @@ public class ListaCondicional {
 				}
 				sc.close();
 			}
+			static void ex19() {
+				Scanner sc = new Scanner(System.in);
+
+		        System.out.print("Digite o peso (em kg): ");
+		        float peso = sc.nextFloat();
+		        System.out.print("Digite a altura (em metros): ");
+		        float altura = sc.nextFloat();
+
+		        double imc = peso /(Math.pow(altura, 2));
+
+		        System.out.printf("IMC: %.2f\n", imc);
+
+		        if (imc < 18.5) {
+		            System.out.println("Classificação : Baixo peso");
+		        } else if (imc < 24.9) {
+		            System.out.println("Classificação : Peso normal");
+		        } else if (imc < 29.9) {
+		            System.out.println("Classificação : Sobrepeso");
+		        } else {
+		            System.out.println("Classificação : Obesidade");
+		        }
+
+		        sc.close();
+			}
+			static void ex20() {
+				Scanner sc = new Scanner(System.in);
+
+		        String senhaCorreta = "12345";
+		        int tentativas = 0;
+		        boolean acertouSenha = false;
+
+		        while (tentativas < 3) {
+		            System.out.print("Digite a senha : ");
+		            String senha= sc.nextLine();
+
+		            if (senha.equals(senhaCorreta)) {
+		                acertouSenha = true;
+		                break;
+		            } else {
+		                tentativas++;
+		                System.out.println("Senha incorreta! Tentativas restantes: "+(3-tentativas));
+		            }
+		        }
+
+		        if (acertouSenha) {
+		            System.out.println("Acesso permitido!");
+		        } 
+		        else {
+		            System.out.println("Acesso bloqueado!");
+		        }
+
+		        sc.close();
+			}
 	}
 
 
