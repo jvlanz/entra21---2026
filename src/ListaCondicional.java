@@ -8,10 +8,10 @@ public class ListaCondicional {
 	}
 	static void ex1(){
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Digite um numero : ");
+		System.out.println("Digite um número : ");
 		int valor=sc.nextInt();
 		if (valor%2==0) {
-			System.out.println("Este numero é par");
+			System.out.println("Este número é par");
 		}
 		else {
 			System.out.println("Este numero é impar");
@@ -20,20 +20,23 @@ public class ListaCondicional {
 	}
 		static void ex2(){
 			Scanner sc=new Scanner(System.in);
-			System.out.println("Digite um numero : ");
+			System.out.println("Digite um número : ");
 			int n1=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n2=sc.nextInt();
 			if (n1>n2) {
-				System.out.println("O maior numero é : "+n1);
+				System.out.println("O maior número é : "+n1);
 			}
-			else {
-				System.out.println("O maior numero é : "+n2);
+			else if (n2>n1) {
+				System.out.println("O maior número é : "+n2);
+			}
+			else{
+				System.out.println("Os números são iguais");
 			}
 		}
 		static void ex3(){
 			Scanner sc=new Scanner(System.in);
-			System.out.println("Digite um numero : ");
+			System.out.println("Digite um número : ");
 			int valor=sc.nextInt();
 			if (valor>0) {
 				System.out.println("Este valor é positivo");
@@ -72,11 +75,11 @@ public class ListaCondicional {
 		}
 		static void ex6(){
 			Scanner sc=new Scanner(System.in);
-			System.out.println("Digite um numero : ");
+			System.out.println("Digite um número : ");
 			int n1=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n2=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n3=sc.nextInt();
 			if (n1>n2&&n1>n3) {
 				System.out.println("O maior numero é : "+n1);
@@ -84,43 +87,43 @@ public class ListaCondicional {
 			else if (n2>n1&&n2>n3){
 				System.out.println("O maior numero é : "+n2);
 			}
-			else {
+			else if (n3>n1&&n3>n2){
 				System.out.println("O maior numero é : "+n3);
 			}
 			sc.close();
 		}
 		static void ex7(){
-			Scanner sc=new Scanner(System.in);
+			Scanner sc = new Scanner(System.in);
 			System.out.println("Digite a sua nota : ");
 			int nota=sc.nextInt();
 			if (nota>=9) {
-				System.out.println("Excelente");
+				System.out.println("A sua nota foi classificada como : Excelente");
 			}
 			else if (nota>=7){
-				System.out.println("Bom");
+				System.out.println("A sua nota foi classificada como : Bom");
 			}
 			else if (nota>=5) {
-				System.out.println("Regular");
+				System.out.println("A sua nota foi classificada como : Regular");
 			}
 			else {
-				System.out.println("Insuficiente");
+				System.out.println("A sua nota foi classificada como : Insuficiente");
 			}
 			sc.close();
 		}
 		static void ex8(){
 			Scanner sc=new Scanner(System.in);
-			System.out.println("Digite um numero : ");
+			System.out.println("Digite um número : ");
 			int n1=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n2=sc.nextInt();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			int n3=sc.nextInt();
 		
 			if (n1+n2>n3&&n1+n3>n2&&n2+n3>n1) {
-				System.out.println("Pode ser um triangulo");
+				System.out.println("Essas medidas podem ser de um triângulo");
 			}
 			else {
-				System.out.println("O triângulo não pode existir");
+				System.out.println("O triângulo com essas medidas não pode existir");
 			}
 			sc.close();
 		}
@@ -134,19 +137,19 @@ public class ListaCondicional {
 			int n3=sc.nextInt();
 			
 			if (n1==n2&&n1==n3) {
-				System.out.println("O triângulo é equilatero");
+				System.out.println("O triângulo é equilátero");
 			}
 			else if (n1!=n2&&n1!=n3&&n2!=n3) {
 				System.out.println("O triângulo é escaleno");
 			}
 			else {
-				System.out.println("O triângulo é isosceles");
+				System.out.println("O triângulo é isósceles");
 			}
 			sc.close();
 		}
 			static void ex10() {
 				Scanner sc=new Scanner(System.in);
-				System.out.println("Digite o usuario : ");
+				System.out.println("Digite o usuário : ");
 				String usuario=sc.nextLine();
 				System.out.println("Digite a senha : ");
 				String senha=sc.nextLine();
@@ -163,47 +166,50 @@ public class ListaCondicional {
 				Scanner sc=new Scanner(System.in);
 				System.out.println("Digite um ano : ");
 				int ano=sc.nextInt();
-				if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+				if ((ano%4==0 && ano%100!= 0) || (ano %400==0)) {
 					System.out.println("O ano é bissexto");
+				}
+				else{
+					System.out.println("O ano não é bissexto");
 				}
 				sc.close();
 			}
 			static void ex12(){
 				Scanner sc=new Scanner(System.in);
-				System.out.println("Digite um numero : ");
+				System.out.println("Digite um número : ");
 				float n1=sc.nextFloat();
-				System.out.println("Digite outro numero : ");
+				System.out.println("Digite outro número : ");
 				float n2=sc.nextFloat();
-				System.out.println("Digite uma operacao : ");
+				System.out.println("Digite uma operação : ");
 				char operacao=sc.nextLine().charAt(0);
 				if (operacao=='+') {
-					System.out.println("A soma dos numeros é : "+(n1+n2));
+					System.out.println("A soma dos números é : "+(n1+n2));
 				}
 				else if (operacao=='-') {
-					System.out.println("A subtracao dos numeros é : "+(n1-n2));
+					System.out.println("A subtração dos números é : "+(n1-n2));
 				}
 				else if (operacao=='*') {
-					System.out.println("A multiplicacao dos numeros é : "+(n1*n2));
+					System.out.println("A multiplicação dos números é : "+(n1*n2));
 				}
 				else if (operacao=='/') {
-					System.out.println("A divisao dos numeros é : "+(n1/n2));
+					System.out.println("A divisão dos números é : "+(n1/n2));
 				}
 			}
 			static void ex13() {
 				Scanner sc=new Scanner(System.in);
-				System.out.println("Digite o seu salario : ");
+				System.out.println("Digite o seu salário : ");
 				float salario=sc.nextFloat();
 				if (salario<2000) {
-					System.out.println("O salario será : "+salario*0.9f);
+					System.out.println("Será descontado 10%. O salário final será : "+salario*0.9f);
 				}
-				else if (salario>=2000&&salario<5000) {
-					System.out.println("O salario será : "+salario*0.85f);
+				else if (salario>=2000 && salario<5000) {
+					System.out.println("Será descontado 15%. O salário final será : "+salario*0.85f);
 				}
-				else if (salario>=5000&&salario<10000) {
-					System.out.println("O salario será : "+salario*0.7f);
+				else if (salario>=5000 && salario<10000) {
+					System.out.println("Será descontado 30%. O salário final será : "+salario*0.7f);
 				}
 				else if (salario>=10000) {
-					System.out.println("O salario será : "+salario*0.65f);
+					System.out.println("Será descontado 35%. O salário final será : "+salario*0.65f);
 				}
 			}
 			static void ex14() {
@@ -213,16 +219,16 @@ public class ListaCondicional {
 				if (valor<=100) {
 					System.out.println("O valor será : "+valor);
 				}
-				else if (valor>100&&valor<=500) {
-					System.out.println("O valor será : "+valor*0.9f);
+				else if (valor>100 && valor<=500) {
+					System.out.println("Será descontado 10%. O valor será : "+valor*0.9f);
 				}
 				if (valor<500) {
-					System.out.println("O valor será : "+valor*0.8f);
+					System.out.println("Será descontado 20%. O valor será : "+valor*0.8f);
 				}
 			}
 			static void ex15(){
 				Scanner sc=new Scanner(System.in);
-				System.out.println("Digite sua idade : ");
+				System.out.println("Digite a sua idade : ");
 				int idade=sc.nextInt();
 				if (idade>=0&&idade<=12) {
 					System.out.println("Você é criança");
@@ -235,6 +241,9 @@ public class ListaCondicional {
 				}
 				else if (idade>=60){
 					System.out.println("Você é idoso");
+				}
+				else{
+					System.out.println("Idade inválida");
 				}
 			}
 			static void ex16() {
