@@ -230,13 +230,13 @@ public class ListaCondicional {
 				Scanner sc=new Scanner(System.in);
 				System.out.println("Digite a sua idade : ");
 				int idade=sc.nextInt();
-				if (idade>=0&&idade<=12) {
+				if (idade>=0 && idade<=12) {
 					System.out.println("Você é criança");
 				}
-				else if (idade>=13&&idade<=17){
+				else if (idade>=13 && idade<=17){
 					System.out.println("Você é adolescente");
 				}
-				else if (idade>=18&&idade<=59){
+				else if (idade>=18 && idade<=59){
 					System.out.println("Você é adulto");
 				}
 				else if (idade>=60){
@@ -248,14 +248,14 @@ public class ListaCondicional {
 			}
 			static void ex16() {
 			Scanner sc=new Scanner(System.in);
-			System.out.println("Digite um numero : ");
+			System.out.println("Digite um número : ");
 			float n1=sc.nextFloat();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			float n2=sc.nextFloat();
-			System.out.println("Digite outro numero : ");
+			System.out.println("Digite outro número : ");
 			float n3=sc.nextFloat();
 			
-			float media=n1+n2+n3/3;
+			float media=(n1+n2+n3)/3;
 			if (media>=7) {
 				System.out.println("Você está aprovado");
 			}
@@ -275,10 +275,10 @@ public class ListaCondicional {
 				float parcelas=sc.nextFloat();
 				
 				if (salario/parcelas<=0.4f) {
-					System.out.println("Você está elegível para o emprestimo");
+					System.out.println("Você está elegível para o empréstimo");
 				}
 				else {
-					System.out.println("Você está inelegível para o emprestimo");
+					System.out.println("Você está inelegível para o empréstimo");
 				}
 				sc.close();
 			}
@@ -306,7 +306,7 @@ public class ListaCondicional {
 		        System.out.print("Digite a altura (em metros): ");
 		        float altura = sc.nextFloat();
 
-		        double imc = peso /(Math.pow(altura, 2));
+		        double imc = peso/(Math.pow(altura, 2));
 
 		        System.out.printf("IMC: %.2f\n", imc);
 
@@ -323,13 +323,13 @@ public class ListaCondicional {
 		        sc.close();
 			}
 			static void ex20() {
-				Scanner sc = new Scanner(System.in);
+				Scanner sc=new Scanner(System.in);
 
-		        String senhaCorreta = "12345";
-		        int tentativas = 0;
+		        String senhaCorreta= "12345";
+		        int tentativas= 0;
 		        boolean acertouSenha = false;
 
-		        while (tentativas < 3) {
+		        while (tentativas< 3) {
 		            System.out.print("Digite a senha : ");
 		            String senha= sc.nextLine();
 
