@@ -121,9 +121,9 @@ public class Vetores {
 		for (int i = 0; i < num.length - 1; i++) {
 			for (int j = 0; j < num.length - 1; j++) {
 			     if (num[j] > num[j + 1]) {
-			         int temp = num[j];
+			         int temporario = num[j];
 			         num[j] = num[j + 1];
-			         num[j + 1] = temp;
+			         num[j + 1] = temporario;
 			        }
 			    }
 			}
@@ -135,12 +135,15 @@ public class Vetores {
 	static void ex6() {
 		Scanner sc=new Scanner(System.in);
 		int[] num=new int[10];
+		int soma=0;
 		for (int i=0;i<num.length;i++) {
 			System.out.println("Digite um número : ");
 			num[i]=sc.nextInt();
+			soma+=num[i];
 		}
+		double media=(soma/10);
 		for(int i=0;i<num.length;i++) {
-			if (num[i]>=7) {
+			if (num[i]>=media) {
 				System.out.println(num[i]+" ");
 			}
 		}
