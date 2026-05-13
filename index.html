@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" id="nome" placeholder="Ex: Joao">
+        <input type="text" id="email" placeholder="Ex: joao@example.com">
+        <input type="button" value="gravar" onclick="validar()">
+    </form>
+    <p id="demo">Olá</p>
+
+
+    <script>
+        /*const inputNome = document.getElementById("nome")
+        console.log(inputNome)
+        console.log(inputNome.value)
+        const inputEmail = document.getElementById("email")
+        console.log(inputEmail.value)
+
+        const inputs = document.getElementsByTagName("input")
+        console.log(inputs[0].value)
+
+        const meuParagrafo = document.getElementById("demo")
+        console.log(meuParagrafo.textContent)*/
+
+        function validar(){
+            const inputNome = document.getElementById("nome")
+            if (inputNome.value==''){
+                alert("O nome deve ser informado")
+                inputNome.focus()
+                return
+            }
+            const inputEmail = document.getElementById("email")
+            if (inputEmail.value==''){
+                alert("O email deve ser informado")
+                inputEmail.focus()
+                return
+            }
+            const meuParagrafo=document.getElementById("demo")
+            meuParagrafo.innerText = ("Olá "+inputNome.value)
+
+            alert("Suas informações foram enviadas com sucesso")
+            document.getElementById('form').submit();
+        }
+    </script>
+</body>
+
+</html>
