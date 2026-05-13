@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .red{
+        .red {
             color: red;
         }
 
-         .azul{
+        .azul {
             color: blue;
         }
     </style>
 </head>
+
 <body>
     <div id="texto">
         <!---->
@@ -30,39 +32,40 @@
     <button onclick="removerBotoes()">remover botões</button>
 
     <script>
-       function criarParagrafo(){
-          const mp = document.createElement('p')
-          mp.innerHTML = 'hello world'
-          mp.setAttribute('class','red')
-         
-          document.getElementById('texto').appendChild(mp)
-       }
+        function criarParagrafo() {
+            const mp = document.createElement('p')
+            mp.innerHTML = 'hello world'
+            mp.setAttribute('class', 'red')
 
-       function criarBotao(){
-          const bt = document.createElement('button')
-          bt.innerHTML = 'Salvar'
-          bt.setAttribute('onclick','alert()')
+            document.getElementById('texto').appendChild(mp)
+        }
 
-          document.getElementById('botoes').appendChild(bt)
+        function criarBotao() {
+            const bt = document.createElement('button')
+            bt.innerHTML = 'Salvar'
+            bt.setAttribute('onclick', 'alert()')
+
+            document.getElementById('botoes').appendChild(bt)
 
 
-          const btinput = document.createElement('input')
-          btinput.setAttribute('type','button')
-          btinput.setAttribute('value', 'salvar')  
-          btinput.style.backgroundColor = 'red'        
-          document.getElementById('botoes').appendChild(btinput)
-       }
+            const btinput = document.createElement('input')
+            btinput.setAttribute('type', 'button')
+            btinput.setAttribute('value', 'salvar')
+            btinput.style.backgroundColor = 'red'
+            document.getElementById('botoes').appendChild(btinput)
+        }
 
-       function removerBotoes(){ 
-          //const bt = document.getElementsByTagName("button")  
-          const bt = document.querySelector('#botoes button') 
-          console.log(bt)      
-          document.getElementById('botoes').removeChild(bt)
+        function removerBotoes() {
+            //const bt = document.getElementsByTagName("button")  
+            const bt = document.querySelector('#botoes button')
+            console.log(bt)
+            document.getElementById('botoes').removeChild(bt)
 
-          const mp = document.querySelector('.red')
-          mp.setAttribute('class','azul')
-       }
+            const mp = document.querySelector('.red')
+            mp.setAttribute('class', 'azul')
+        }
 
     </script>
 </body>
+
 </html>
