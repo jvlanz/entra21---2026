@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div id="tela">TELA</div>
+    <div class="container">
+        <div class="numeros" id="A"><span style="width: 15px;">A</span></div>
+        <div class="numeros" id="B"><span style="width: 15px;">B</span></div>
+        <div class="numeros" id="C"><span style="width: 15px;">C</span></div>
+        <div class="numeros" id="D"><span style="width: 15px;">D</span></div>
+        <div class="numeros" id="E"><span style="width: 15px;">E</span></div>
+        <div class="numeros" id="F"><span style="width: 15px;">F</span></div>
+        <div class="numeros" id="G"><span style="width: 15px;">G</span></div>
+        <div class="numeros" id="H"><span style="width: 15px;">H</span></div>
+        <div class="numeros" id="I"><span style="width: 15px;">I</span></div>
+        <div class="numeros" id="J"><span style="width: 15px;">J</span></div>
+    </div>
+    <p id="contador">Ocupados: 0</p>
+
+    <script>
+        const numerosDiv = document.querySelectorAll('.numeros')
+        for (let j = 0; j < 10; j++)
+            for (let i = 0; i < 9; i++) {
+                const bt = document.createElement('button')
+
+                bt.innerHTML = i + 1;
+                bt.id = numerosDiv[j].id + (i + 1)
+                bt.className = 'livre'
+                bt.onclick = () => selecionar(numerosDiv[j].id + (i + 1))
+                numerosDiv[j].appendChild(bt);
+                if (i == 2 || i==5) {
+                    const espaco = document.createElement('div')
+                    espaco.style.width = '30px'
+                    numerosDiv[j].appendChild(espaco)
+                }
+            }
+
+        function selecionar(id) {
+            const selecionado = document.querySelector('#' + id)
+            console.log(selecionado)
+            selecionado.classList.toggle('ocupado');
+            selecionado.classList.toggle('livre');
+            let quantOcupados = document.querySelectorAll('.ocupado').length
+            document.querySelector('#contador').innerHTML = "Ocupados: " + quantOcupados
+        }
+    </script>
+</body>
+
+</html>

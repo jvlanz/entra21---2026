@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: white;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.container {
+    margin-top: 150px;
+    padding: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2)
+}
+
+.numeros {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    background: white;
+    color: #00000099;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.ocupado {
+    background: green;
+    
+}
+
+.livre {
+    background: white;
+}
+#tela{
+    position: absolute;
+    top: 40px;
+
+    width: 500px;
+    height: 80px;
+
+    background: #dcdcdc;
+    color: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+    transform: perspective(300px) rotateX(-20deg);
+}
+#contador{
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+
+    
+}
