@@ -29,26 +29,25 @@
         const meuParagrafo = document.getElementById("demo")
         console.log(meuParagrafo.textContent)*/
 
-        function validar(){
+        function validar() {
             const inputNome = document.getElementById("nome")
-            if (inputNome.value==''){
+            if (inputNome.value == '') {
                 alert("O nome deve ser informado")
                 inputNome.focus()
                 return
             }
             const inputEmail = document.getElementById("email")
-            if (inputEmail.value==''){
+            if (inputEmail.value == '') {
                 alert("O email deve ser informado")
                 inputEmail.focus()
                 return
             }
-            const meuParagrafo=document.getElementById("demo")
-            meuParagrafo.innerText = ("Olá "+inputNome.value)
+            const meuParagrafo = document.getElementById("demo")
+            meuParagrafo.innerText = ("Olá " + inputNome.value)
 
             alert("Suas informações foram enviadas com sucesso")
             document.getElementById('form').submit();
         }
     </script>
 </body>
-
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tabela.css">
+</head>
+
+<body>
+    <div id="arealistaClientes">
+        <h2>Lista de Clientes</h2>
+
+        <table border="1">
+
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabela">
+            </tbody>
+
+        </table>
+    </div>
+    <button onclick=mostrarCadastro()>Cadastro</button>
+    <button onclick=carregarTabela()>Carregar Cadastros</button>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
